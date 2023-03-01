@@ -1,42 +1,43 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { Container } from '@mui/system';
+import {Box, Card, CardActions, CardContent, Button, Typography} from '@mui/material';
+import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
+import Image from "../images/nerdyHeart.png"
 
-const bull = (
-    <Box
-      component="span"
-      sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-      •
-    </Box>
-  );
-  
-  export default function Home() {
+export default function Home() {
     return (
-      <Card sx={{ minWidth: 275 }}>
-        <CardContent>
-          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            Word of the Day
-          </Typography>
-          <Typography variant="h5" component="div">
-            be{bull}nev{bull}o{bull}lent
-          </Typography>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            adjective
-          </Typography>
-          <Typography variant="body2">
-            well meaning and kindly.
-            <br />
-            {'"a benevolent smile"'}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">Learn More</Button>
-        </CardActions>
-      </Card>
+        <Container>
+            <Grid2 container spacing={2}>
+                <Grid2 xs={4}>
+                    <Box
+                        component="img"
+                        sx={{
+                            width: 300,
+                            height: 300,
+                        }}
+                        alt="an image of my character"
+                        src={Image}
+                    />
+                </Grid2>
+                <Grid2 xs={8}>
+                    <Card sx={{ minWidth: 275 }}>
+                        <CardContent>
+                            <Typography variant="h5" component="div">
+                                Welcome to my site!
+                            </Typography>
+                            <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                It's still a work in progress
+                            </Typography>
+                            <Typography variant="body2">
+                                Here you can view my art archive and also view my commission info! And yes, I did build a whole site just for my art archive
+                            </Typography>
+                        </CardContent>
+                        {/* <CardActions>
+                            <Button size="small">Learn More</Button>
+                        </CardActions> */}
+                    </Card>
+                </Grid2>
+            </Grid2>
+        </Container>
     );
-  }
+}

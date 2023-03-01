@@ -1,6 +1,6 @@
 import React from "react";
-import { Route, Routes } from "react-router"
-import Home from "./components/Home"
+import { Route, Routes } from "react-router";
+import Home from "./components/Home";
 import Commissions from "./components/Commissions";
 import ResponsiveAppBar from "./components/Navbar";
 
@@ -9,7 +9,7 @@ function App() {
         <div>
             <ResponsiveAppBar />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="Home" element={<Home />} />
                 <Route path="Commissions" element={<Commissions />} />
             </Routes>
         </div>
