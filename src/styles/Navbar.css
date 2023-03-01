@@ -1,4 +1,12 @@
+/* Needed to make the navbar 100% width */
+body {
+    margin: 0%;
+}
 a {
     color: black;
+    font-family: 'Quicksand', sans-serif;
     text-decoration: none;
+}
+.MuiBox-root {
+    justify-content: flex-end;
 }

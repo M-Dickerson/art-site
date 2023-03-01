@@ -1,23 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router";
+// Page imports
 import Home from "./components/pages/Home";
 import Archive from "./components/pages/Archive";
+import About from "./components/pages/About";
 import Commissions from "./components/pages/Commissions";
-import ResponsiveAppBar from "./components/Navbar";
-import SimpleBottomNavigation from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
+    const [currentPage, setPage] = useState("Home");
     return (
         <div>
-            <ResponsiveAppBar />
+            <Navbar />
             <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="Home" element={<Home />} />
                 <Route path="Commissions" element={<Commissions />} />
                 <Route path="Archive" element={<Archive />} />
+                <Route path="About" element={<About />} />
             </Routes>
-            <SimpleBottomNavigation />
+            <Footer />
         </div>
-        );
-}
-
-export default App;
+    );
+};

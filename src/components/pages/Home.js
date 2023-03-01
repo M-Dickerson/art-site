@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <Container className="homeContainer">
             <Grid2 container spacing={2}>
-                <Grid2 xs={4}>
+                <Grid2 xs={12} md={5}>
                     <Box
                         component="img"
                         sx={{
@@ -20,17 +20,17 @@ export default function Home() {
                         src={Image}
                     />
                 </Grid2>
-                <Grid2 xs={8}>
-                    <Card sx={{ minWidth: 275 }}>
+                <Grid2 xs={12} md={7} className="test">
+                    <Card sx={{ minWidth: 275, fontFamily: 'Quicksand' }}>
                         <CardContent>
                             <Typography variant="h4">
-                                Welcome to my site!
+                                Welcome!
                             </Typography>
                             <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                It's still a work in progress pls don't judge
+                                W.I.P
                             </Typography>
                             <Typography variant="body1">
-                                Here you can view my art archive and also view my commission info!
+                                I'll put proper words here eventually
                             </Typography>
                         </CardContent>
                     </Card>

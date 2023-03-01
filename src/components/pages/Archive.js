@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, ImageList, ImageListItem } from '@mui/material';
 import { maxHeight, maxWidth } from '@mui/system';
 
-export default function MasonryImageList() {
+export default function Archive() {
     return (
         <Box sx={{ width: maxWidth, height: maxHeight }}>
             <ImageList variant="masonry" cols={3} gap={8}>

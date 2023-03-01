@@ -1,14 +1,14 @@
 import * as React from "react";
 import { Paper, BottomNavigation, BottomNavigationAction } from "@mui/material";
-import RestoreIcon from "@mui/icons-material/Restore";
+import InstagramIcon from '@mui/icons-material/Instagram';
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import InterestsIcon from '@mui/icons-material/Interests';
 
-export default function SimpleBottomNavigation() {
+export default function Footer() {
     const [value, setValue] = React.useState(0);
 
     return (
-        <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+        <Paper sx={{ position: 'sticky', bottom: 0, left: 0, right: 0 }} elevation={3}>
             <BottomNavigation
                 showLabels
                 value={value}
@@ -16,9 +16,9 @@ export default function SimpleBottomNavigation() {
                     setValue(newValue);
                 }}
             >
-                <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-                <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-                <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+                <BottomNavigationAction label="Instagram" icon={<InstagramIcon />} />
+                <BottomNavigationAction label="Ko-Fi" icon={<FavoriteIcon />} />
+                <BottomNavigationAction label="Tumblr" icon={<InterestsIcon />} />
             </BottomNavigation>
         </Paper>
     );
