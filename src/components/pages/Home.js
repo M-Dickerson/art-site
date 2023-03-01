@@ -3,10 +3,11 @@ import { Container } from '@mui/system';
 import {Box, Card, CardActions, CardContent, Button, Typography} from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Image from "../../images/nerdyHeart.png"
+import "../../styles/Home.css"
 
 export default function Home() {
     return (
-        <Container>
+        <Container className="home">
             <Grid2 container spacing={2}>
                 <Grid2 xs={4}>
                     <Box
