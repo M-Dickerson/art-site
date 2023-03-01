@@ -1,8 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router";
-import Home from "./components/Home";
-import Commissions from "./components/Commissions";
+import Home from "./components/pages/Home";
+import Commissions from "./components/pages/Commissions";
 import ResponsiveAppBar from "./components/Navbar";
+import SimpleBottomNavigation from "./components/Footer";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                 <Route path="Home" element={<Home />} />
                 <Route path="Commissions" element={<Commissions />} />
             </Routes>
+            <SimpleBottomNavigation />
         </div>
         );
 }
