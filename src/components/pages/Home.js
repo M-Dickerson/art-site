@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Container } from '@mui/system';
-import {Box, Card, CardActions, CardContent, Button, Typography} from '@mui/material';
+import {Box, Card, CardContent, Typography} from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Image from "../../images/nerdyHeart.png"
 import "../../styles/Home.css"
@@ -33,9 +33,6 @@ export default function Home() {
                                 Here you can view my art archive and also view my commission info!
                             </Typography>
                         </CardContent>
-                        {/* <CardActions>
-                            <Button size="small">Learn More</Button>
-                        </CardActions> */}
                     </Card>
                 </Grid2>
             </Grid2>

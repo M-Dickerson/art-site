@@ -1,26 +1,20 @@
 // Normal imports
 import * as React from "react";
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem } from "@mui/material";
+import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "../styles/Navbar.css";
 // Needed for BrowserRoutes
 import { Link } from "react-router-dom";
-// The users icon that displays in the header
-import Icon from "../images/icon3.png"
 
 // Content
 const pages = ["Home", "Commissions", "Archive"];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [setAnchorElUser] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
     };
 
     const handleCloseNavMenu = () => {
@@ -43,8 +37,7 @@ function ResponsiveAppBar() {
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
                             fontWeight: 700,
-                            color: 'inherit',
-                            textDecoration: 'none',
+                            color: 'black'
                         }}
                     >
                         Welcome, Starlight
@@ -99,8 +92,7 @@ function ResponsiveAppBar() {
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
                             fontWeight: 700,
-                            color: 'inherit',
-                            textDecoration: 'none',
+                            color: 'black'
                         }}
                     >
                         Welcome, Starlight
@@ -117,36 +109,6 @@ function ResponsiveAppBar() {
                                 </Link>
                             </Button>
                         ))}
-                    </Box>
-
-                    <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="the users icon image" src={Icon} />
-                            </IconButton>
-                        </Tooltip>
-                        <Menu
-                            sx={{ mt: '45px' }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
                     </Box>
                 </Toolbar>
             </Container>
