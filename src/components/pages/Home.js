@@ -7,7 +7,7 @@ import "../../styles/Home.css"
 
 export default function Home() {
     return (
-        <Container className="home">
+        <Container className="homeContainer">
             <Grid2 container spacing={2}>
                 <Grid2 xs={4}>
                     <Box
@@ -23,14 +23,14 @@ export default function Home() {
                 <Grid2 xs={8}>
                     <Card sx={{ minWidth: 275 }}>
                         <CardContent>
-                            <Typography variant="h5">
+                            <Typography variant="h4">
                                 Welcome to my site!
                             </Typography>
                             <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                It's still a work in progress
+                                It's still a work in progress pls don't judge
                             </Typography>
                             <Typography variant="body1">
-                                Here you can view my art archive and also view my commission info! And yes, I did build a whole site just for my art archive
+                                Here you can view my art archive and also view my commission info!
                             </Typography>
                         </CardContent>
                         {/* <CardActions>

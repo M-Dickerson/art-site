@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import Icon from "../images/icon3.png"
 
 // Content
-const pages = ["Home", "Commissions"];
+const pages = ["Home", "Commissions", "Archive"];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -32,7 +32,7 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="static" className="navbar">
+        <AppBar position="static" style={{background: "#FF8BA0"}}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
