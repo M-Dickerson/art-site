@@ -143,6 +143,7 @@ export default function Navbar() {
                         >
                             {settings.map((setting) => (
                                 <MenuItem
+                                key={setting}
                                 as={ReactLink} to="/About">
                                 About</MenuItem>
                             ))}
@@ -153,4 +154,3 @@ export default function Navbar() {
         </AppBar>
     );
 }
-console.log(MenuItem)
