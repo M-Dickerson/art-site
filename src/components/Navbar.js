@@ -3,6 +3,7 @@ import * as React from "react";
 import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "../styles/Navbar.css";
+import { Link as ReactLink } from "react-router-dom";
 // Needed for BrowserRoutes
 import { Link } from "react-router-dom";
 import NightsStayIcon from '@mui/icons-material/NightsStay';
@@ -141,9 +142,9 @@ export default function Navbar() {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
+                                <MenuItem
+                                as={ReactLink} to="/About">
+                                About</MenuItem>
                             ))}
                         </Menu>
                     </Box>
@@ -152,3 +153,4 @@ export default function Navbar() {
         </AppBar>
     );
 }
+console.log(MenuItem)
