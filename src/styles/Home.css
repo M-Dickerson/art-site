@@ -5,3 +5,7 @@ body {
     margin-top: 2%;
     font-family: 'Quicksand', sans-serif;
 }
+.homeImage {
+    display: flex;
+    justify-content: center;
+}
